@@ -49,9 +49,20 @@ I remain deeply curious and engaged in my current Help Desk role. I continuously
   </tbody>
 </table>
 
+
 ### November 2026 Focus
 
 Upcoming operational expansion and additional incident workflows.
+
+
+
+## Skills Demonstrated
+
+* **Incident Triage & Containment:** Applied endpoint and identity containment protocols to secure compromised systems and accounts.
+* **Advanced Hunting with KQL:** Queried raw telemetry logs to trace execution paths, inspect command-line arguments, and analyze error codes.
+* **SOAR Playbook Observation & Correlation:** Monitored automated playbook execution across regional domain controllers and mapped them against risk telemetry.
+* **False-Positive Analysis:** Differentiated genuine security threats from legitimate administrative actions and browser profile migrations.
+* **Cross-Team Coordination & Communication:** Partnered with IT leadership and maintained empathetic, clear communication with users throughout remediation and account recovery windows.
 
 ## Sample KQL Hunting Queries
 
@@ -65,4 +76,10 @@ DeviceProcessEvents
    or ProcessCommandLine has "ProfileImport"
 | project Timestamp, DeviceName, FileName,
          InitiatingProcessFileName, ProcessCommandLine, AccountName
+| sort by Timestamp desc
+
+AADSignInEventsBeta
+| where Timestamp > ago(7d)
+| where UserPrincipalName has "<user-identifier>"
+| project Timestamp, UserPrincipalName, IPAddress, AppDisplayName, ClientAppUsed, ErrorCode, ResultType
 | sort by Timestamp desc
