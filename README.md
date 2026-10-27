@@ -13,11 +13,11 @@
 
 ---
 
-## About This Repository
+## Professional Background
 
-Hiring managers look for technical problem-solvers who can investigate telemetry, handle automated containment, and communicate calmly with users. This repository highlights how daily help-desk support scales into structured incident response across endpoint and cloud environments.
-
-> **The Human Element:** Leveraging strong interpersonal communication—honed through coaching and high school IT support—to guide users smoothly through security incidents, credential resets, and device deployments.
+* **Current Role:** Help Desk Technician & IT Support in a multi-school educational environment, balancing daily technical troubleshooting with security operations.
+* **Dual Perspective:** Combining foundational technical investigations—such as endpoint EDR telemetry, KQL query hunting, and automated SOAR playbook analysis—με high-empathy user communication.
+* **Career Goal:** A seamless, methodical transition from frontline IT Operations into full-time Cybersecurity, driven by hands-on exposure to real-world threats, automated containment workflows, and active learning.
 
 ---
 
@@ -66,4 +66,12 @@ DeviceProcessEvents
 | where DeviceName =~ "<device-name>"
 | where FileName in~ ("installer.exe", "updater.exe") or ProcessCommandLine has "ProfileImport"
 | project Timestamp, DeviceName, FileName, InitiatingProcessFileName, ProcessCommandLine, AccountName
+| sort by Timestamp desc
+
+
+### Investigate Entra ID Sign-In & Error Codes
+AADSignInEventsBeta
+| where Timestamp > ago(7d)
+| where UserPrincipalName has "<user-identifier>"
+| project Timestamp, UserPrincipalName, IPAddress, AppDisplayName, ClientAppUsed, ErrorCode, ResultType
 | sort by Timestamp desc
