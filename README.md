@@ -20,6 +20,32 @@ I remain deeply curious and engaged in my current Help Desk role. I continuously
 | **Core Tools** | Microsoft Defender for Endpoint, Adlumin, Entra ID, Windows SOAR, KQL                                                    |
 | **Objective**  | Bridging frontline technical troubleshooting and user support with automated security containment and telemetry analysis |
 
+
+## Visual Incident Triage & Automated Response Workflow
+
+The following architecture diagram outlines the end-to-end operational workflow derived from our Council Rock School District incident logs, demonstrating how frontline alerts trigger automated SOAR containment, advanced KQL telemetry analysis, false-positive validation, and high-empathy user remediation:
+
+```mermaid
+flowchart TD
+    classDef alert fill:#f8fafc,stroke:#0f172a,stroke-width:2px,color:#0f172a;
+    classDef soar fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0369a1;
+    classDef kql fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#92400e;
+    classDef resolve fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#166534;
+
+    A["Security Alert / Ingestion<br/>• Defender EDR Malware / Masqueraded Binaries<br/>• M365 Risky Sign-In / Password Spray (MITRE T1110)"]:::alert --> B{"Automated SOAR / Identity Trigger"}:::soar
+
+    B -->|"High Severity / Threat Confirmed"| C["Automated Containment Actions<br/>• Domain Account Disable across Regional DCs<br/>• Defender Device Isolation / Clean-Room Reimage"]:::soar
+    B -->|"Ambiguous / Potential False Positive"| D["Advanced KQL Telemetry Analysis<br/>• Query DeviceProcessEvents & DeviceFileEvents<br/>• Trace CLI arguments & ProfileImport migrations"]:::kql
+
+    C --> E["Cross-Team Coordination & Remediation<br/>• Exchange Message Trace & Entra ID Error Codes<br/>• User Communication & Classlink Password Reset"]:::resolve
+    D -->|"Verified Benign Utility"| F["Close Incident / Document Baseline<br/>• Validate Chromium Profile Migration<br/>• Zero User Disruption"]:::resolve
+    D -->|"Malicious Artifacts Found"| C
+    E --> G["Incident Closure & Audit Trail Logging"]:::resolve
+    F --> G
+```
+
+
+
 ## Monthly Incident Triage Tracker
 
 
