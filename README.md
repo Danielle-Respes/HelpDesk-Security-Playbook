@@ -23,7 +23,7 @@ I remain deeply curious and engaged in my current Help Desk role. I continuously
 
 ## Visual Incident Triage & Automated Response Workflow
 
-The following architecture diagram outlines the end-to-end operational workflow derived from our Council Rock School District incident logs, demonstrating how frontline alerts trigger automated SOAR containment, advanced KQL telemetry analysis, false-positive validation, and high-empathy user remediation:
+The following architecture diagram outlines the end-to-end operational workflow derived from my School District incident logs, demonstrating how frontline alerts trigger automated SOAR containment, advanced KQL telemetry analysis, false-positive validation, and high-empathy user remediation:
 
 ```mermaid
 flowchart TD
