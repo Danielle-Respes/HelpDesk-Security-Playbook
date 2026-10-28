@@ -46,11 +46,13 @@ Microsoft Sentinel · KQL · Defender for Endpoint · Defender XDR · Entra ID �
 - Collaboration with IT leadership and senior staff on containment, reimaging, and user communication decisions
 
 ## Lab Work
+## Lab Work
 
 | Project | Summary |
 |---|---|
+| [Northpeak Descent Cross-Platform Intrusion Investigation](https://github.com/Danielle-Respes/Northpeak-Descent-Cross-Platform-Intrusion-Sentinel-KQL-2026) | Lab investigation across Windows and Linux telemetry in Defender for Endpoint and Sentinel, using KQL to reconstruct the intrusion sequence and separate real logon activity from noise. |
 | [Copilot Prompt-Injection Threat Hunt](#) | Simulated M365 Copilot data. Traced an attack path and exfiltration channel in Sentinel, and documented log gaps. |
-| [Vulnerability Management Program](#) | Tenable scanning in Azure VMs, CVSS prioritization, and a mock Change Advisory Board review. |
+| [Vulnerability Management Program](https://github.com/Danielle-Respes/Vulnerability-Management) | Tenable scanning in Azure VMs, CVSS prioritization, and a mock Change Advisory Board review. |
 
 ## Contact
 
