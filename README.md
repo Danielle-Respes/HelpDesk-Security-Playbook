@@ -34,7 +34,7 @@ Account disables and reimaging require supervisor or IT leadership approval. A d
 
 ## Core Tools
 
-Microsoft Sentinel · KQL · Defender for Endpoint · Defender XDR · Entra ID · Microsoft 365 · Intune · Tenable Nessus · MITRE ATT&CK · NIST 800-61
+Microsoft Sentinel · KQL · Defender for Endpoint · Defender XDR · Entra ID · Microsoft 365 · Intune · MITRE ATT&CK · NIST 800-61
 
 ## Skills
 
