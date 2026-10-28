@@ -46,7 +46,7 @@ Microsoft Sentinel · KQL · Defender for Endpoint · Defender XDR · Entra ID �
 - Collaboration with IT leadership and senior staff on containment, reimaging, and user communication decisions
 
 ## Lab Work
-## Lab Work
+
 
 | Project | Summary |
 |---|---|
